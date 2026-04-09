@@ -169,3 +169,26 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Node / Next.js (web/)
+node_modules/
+.next/
+out/
+.turbo/
+.vercel/
+*.tsbuildinfo
+web/next-env.d.ts
+.env.local
+.env.*.local
+
+# HF model cache (huge, never commit)
+.cache/huggingface/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Backups
+*-backup-*.zip
