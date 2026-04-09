@@ -16,6 +16,10 @@ from transformers import AutoConfig, AutoModel, PreTrainedModel
 
 class DesklibAIDetectionModel(PreTrainedModel):
     config_class = AutoConfig
+    # transformers >= 4.50 expects every PreTrainedModel subclass to declare
+    # its tied-weight keys. We have no tied weights, so this stays empty.
+    _tied_weights_keys: list[str] = []
+    all_tied_weights_keys: dict = {}
 
     def __init__(self, config):
         super().__init__(config)
