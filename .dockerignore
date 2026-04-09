@@ -1,0 +1,45 @@
+# Exclude everything the backend Docker image doesn't need.
+# Keeps the HF Spaces build context small and fast.
+
+# Frontend — deployed separately to Vercel
+web/
+
+# Local python env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Model caches (let the container populate its own)
+.cache/
+~/.cache/
+*.safetensors
+*.bin
+*.ckpt
+
+# Git / IDE / OS
+.git/
+.github/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docs / backups / logs
+*.md
+!README.md
+*-backup-*.zip
+*.log
+
+# Upstream fork artifacts not needed in production
+pages/
+main.py
+setup.sh
+Procfile
+vercel.json
+nltk.txt
+requirements-local.txt
+*.ttf

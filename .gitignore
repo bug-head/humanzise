@@ -192,3 +192,7 @@ Thumbs.db
 
 # Backups
 *-backup-*.zip
+
+# Claude Code / OMC plugin state
+.omc/
+.claude/
